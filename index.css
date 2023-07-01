@@ -24,7 +24,7 @@ body {
     display: grid;
     height: 10px;
     padding: 16px;
-    color: rgb(51, 51, 51);
+    color: rgba(51, 51, 51, 0.442);
 }
 
 .menu-text {
@@ -52,7 +52,7 @@ input {
 label {
     position: absolute;
     z-index: 100;
-    top: 15px;
+    top: 17px;
     right: 20px;
     width: 24px;
     padding: 6px 0;
@@ -65,7 +65,7 @@ label::after {
     display: block;
     position: relative;
     height: 3px;
-    background-color: rgb(92, 92, 92);
+    background-color: rgb(98, 98, 98);
     transition: all .2s;
 }
 
@@ -152,20 +152,21 @@ label::after {
     justify-content: space-between;
     grid-template-columns: 1fr;
     align-items: center;
-
+    
 
 }
 
 .navlinks li a {
     text-decoration: none;
     color: black;
-    margin: 5px;
+    margin: 5px;  
+    
 }
 
 .navmenu {
     display: flex;
     flex-direction: column;
-
+    
 
 }
 
@@ -225,11 +226,10 @@ button {
 }
 
 .clean {
-    background-color: rgb(180, 225, 190);
+    background-color: rgba(146, 183, 154, 0.5);
     width: 290px;
     height: 330px;
     margin: 20px;
-    box-shadow: 5px 5px 5px rgb(169, 208, 204);
 }
 
 .clean h4 {
@@ -260,13 +260,13 @@ button {
     position: relative;
     align-items: center;
     justify-content: center;
-    box-shadow: 10px 5px 5px rgb(162, 213, 208);
 
 }
 
 .om-text {
+    justify-content: center;
     margin: 2rem;
-    padding: 30px;
+    padding: 15px;
 }
 
 .om-text h3 {
@@ -274,15 +274,16 @@ button {
 }
 
 .footer-container {
-    padding: 1rem;
+    margin-top: 5px;
 }
 
 .footer {
-    background-color: rgb(200, 198, 198);
+    background-color: rgb(146, 183, 154);
     width: 100%;
     display: flex;
     padding: 2rem;
-    justify-content: space-between;
+    justify-content: space-around;
+    
     flex-wrap: wrap;
 }
 
@@ -308,7 +309,7 @@ button {
 }
 
 .footer-heading a:hover {
-    color: rgb(111, 160, 156);
+    color: rgb(64, 121, 76);
     transition: 0.3s ease-out;
 }
 
@@ -335,6 +336,8 @@ footer {
 @media (max-width: 1024px) {
     .footer {
         height: 50vh;
+        
+
     }
 }
 
@@ -344,7 +347,7 @@ footer {
     }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 630px) {
     body {
         background-color: rgb(206, 206, 206);
     }
@@ -371,6 +374,7 @@ footer {
     .footer-1 {
         padding: 1rem;
         font-size: 18px;
+        justify-content: center;
     }
 
     .footer-2 {

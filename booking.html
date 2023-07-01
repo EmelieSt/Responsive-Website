@@ -1,13 +1,75 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sv">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <script src="script.js" defer></script>
+    <link rel="icon" type="favicon" href="/bilder/favicon-bokning.png">
     <link rel="stylesheet" href="booking.css">
+    <script src="script.js" defer></script>
+    <title>Bokning</title>
 </head>
+
 <body>
-    
+    <div class="main-container">
+            <h1>Välkommen <span id="kundNamn"></span></h1>
+        <form action="" required>  
+            <div class="input-container">
+                <div>  
+                <!-- DATUM -->  
+                    <input type="date" name="date" id="dateField">
+                <!-- TID -->
+                    <input id="time" name="time" type="time" >
+                <!-- DROPDOWN -->
+                    <select name="städare" id="städare-dropdown"><br>
+                        <option value="">Städare</option>
+                        <option value="Sara">Sara</option>
+                        <option value="Felix">Felix</option>
+                        <option value="Agneta">Agneta</option>
+                    </select>    
+                </div>
+
+                <!-- RADIO BUTTONS -->  
+                <div class="radio-container">
+                    <div class="input-separate">
+                        <input type="radio" id="basic" name="sort" value="Basic" >
+                        <label for="basic">Basic</label>
+                    </div>
+        
+                    <div class="input-separate">
+                        <input type="radio" id="topp" name="sort" value="Topp">
+                        <label for="topp">Topp</label>
+                    </div>
+        
+                    <div class="input-separate">
+                        <input type="radio" id="diamant" name="sort" value="Diamant">
+                        <label for="diamant">Diamant</label>
+                    </div>
+        
+                    <div class="input-separate">
+                        <input type="radio" id="fönstertvätt" name="sort" value="Fönstertvätt">
+                        <label for="fönstertvätt">Fönstertvätt</label>
+                    </div>
+                </div>   
+                    <button id="add-bokning" type="button" onclick="addData()">Boka</button>
+            </div>
+        </form>
+    <div class="list-container">
+            <section>
+                <!-- BOKADE LISTA -->
+                <div class="lista-rubrik">Bokningar</div>
+                <ul id="bokade"></ul>  
+            </section>
+            <br>
+            <section>
+                <!-- UTFÖRDA LISTA -->
+                <div class="lista-rubrik">Utförda</div>
+                <ul id="utförda"></ul>
+                <div class="remove-btn-container">
+                    <button id="remove-btn">Tabort</button>
+                </div>    
+            </section> 
+        </div>      
+    </div>  
 </body>
 </html>
